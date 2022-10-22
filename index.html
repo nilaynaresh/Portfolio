@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./resources/style.css">
+    <script src="https://kit.fontawesome.com/ea3d3b25af.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="contrainer">
+            <nav>
+                <img src="./resources/images/Nilay Logo.svg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Front End Developer</p>
+                <h1 data-text="&nbsp;Hi, I'm Nilay&nbsp;"></h1>
+            </div>
+        </div>
+    </div>
+
+<!---------about--------->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            <img src="./resources/images/Alphaland Photoshoot 2.jpeg">
+        </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>A Houston based-web developer focused on the front & back end in building modern style websites that leads to the success of the overall product.</p><br>
+                <p>From earning a Masters of Accountancy degree to self-taught web developer, this is my journey!</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web Interfaces</li>
+                        <li><span>Web Development</span><br>Writing Back-end Code</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>IT Specialist</span><br>Technical Support, Troubleshooting, Maintenance</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Mississippi State Univeristy</span><br>Masters Degree</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------Portfolio------->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="./resources/images/FusionHospitality.png" >
+                <div class="layer">
+                    <h3>Fusion Hospitality</h3>
+                    <p>xxxxxxxxxxxxxxxxxx</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./resources/images/Space Tourism.png" >
+                <div class="layer">
+                    <h3>Space Tourism</h3>
+                    <p>Online challenge project</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./resources/images/OneByNP.png" >
+                <div class="layer">
+                    <h3>ONEbyNP</h3>
+                    <p>xxxxxxxxxxxxxxxxxx</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+<!--------Contact------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> Nilaynaresh@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen-button"></i> 601-695-5296</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
